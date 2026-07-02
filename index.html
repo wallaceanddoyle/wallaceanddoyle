@@ -340,6 +340,12 @@
     font-family:'Fraunces', serif;
     font-size:1.15rem;
     color:var(--cream);
+    text-decoration:none;
+    transition:color 0.2s ease;
+  }
+  a.contact-list .v, .contact-list a.v{ text-decoration:none; }
+  .contact-list a.v:hover, .contact-list a.v:focus-visible{
+    color:var(--brass-bright);
   }
   .contact-list .v.placeholder{
     color:var(--cream-dim);
@@ -455,15 +461,11 @@
       <ul class="contact-list">
         <li>
           <span class="k">Email</span>
-          <span class="v placeholder">Placeholder: e.g. info@wallaceanddoyle.com</span>
+          <a class="v" href="mailto:info@wallaceanddoyle.com">info@wallaceanddoyle.com</a>
         </li>
         <li>
-          <span class="k">Phone</span>
-          <span class="v placeholder">Placeholder: owner's contact number</span>
-        </li>
-        <li>
-          <span class="k">Instagram</span>
-          <span class="v placeholder">Placeholder: @handle</span>
+          <span class="k">Facebook</span>
+          <a class="v" href="https://www.facebook.com/wallaceanddoyle/" target="_blank" rel="noopener">facebook.com/wallaceanddoyle</a>
         </li>
       </ul>
     </div>
