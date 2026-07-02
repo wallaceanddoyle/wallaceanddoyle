@@ -16,19 +16,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --walnut:#231710;
-    --walnut-2:#2e1f16;
-    --cream:#f1e6d1;
-    --cream-dim:#cdbfa5;
-    --brass:#b8863b;
-    --brass-bright:#d9a75a;
-    --river:#3f5c4e;
-    --rust:#a6532d;
-    --line: rgba(241,230,209,0.14);
+    --walnut:#1b1b1e;
+    --walnut-2:#373f51;
+    --cream:#d8dbe2;
+    --cream-dim:#a9bcd0;
+    --brass:#58a4b0;
+    --brass-bright:#6fbdc9;
+    --river:#373f51;
+    --rust:#58a4b0;
+    --line: rgba(216,219,226,0.14);
   }
 
   *{ margin:0; padding:0; box-sizing:border-box; }
@@ -38,7 +38,7 @@
   body{
     background:var(--walnut);
     color:var(--cream);
-    font-family:'Inter', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-size:16px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
@@ -88,7 +88,7 @@
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(35,23,16,0.92);
+    background:rgba(27,27,30,0.92);
     backdrop-filter: blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -135,8 +135,8 @@
     display:flex;
     align-items:flex-end;
     background:
-      linear-gradient(180deg, rgba(35,23,16,0.15) 0%, rgba(20,13,9,0.92) 92%),
-      repeating-linear-gradient(100deg, #2e1f16 0px, #2e1f16 40px, #34241a 40px, #34241a 80px);
+      linear-gradient(180deg, rgba(27,27,30,0.15) 0%, rgba(15,15,17,0.92) 92%),
+      repeating-linear-gradient(100deg, #373f51 0px, #373f51 40px, #2f3646 40px, #2f3646 80px);
     overflow:hidden;
   }
   .hero::before{
@@ -145,8 +145,8 @@
     position:absolute;
     inset:0;
     background:
-      radial-gradient(circle at 30% 20%, rgba(184,134,59,0.18), transparent 55%),
-      radial-gradient(circle at 80% 70%, rgba(63,92,78,0.25), transparent 55%);
+      radial-gradient(circle at 30% 20%, rgba(88,164,176,0.18), transparent 55%),
+      radial-gradient(circle at 80% 70%, rgba(55,63,81,0.30), transparent 55%);
   }
   .hero-photo-note{
     position:absolute;
@@ -258,7 +258,7 @@
     margin-top:20px;
     font-size:0.76rem;
     color:var(--rust);
-    border:1px dashed rgba(166,83,45,0.5);
+    border:1px dashed rgba(88,164,176,0.5);
     padding:6px 10px;
     border-radius:2px;
   }
@@ -284,7 +284,7 @@
     position:relative;
     overflow:hidden;
     background:
-      repeating-linear-gradient(135deg, #2e1f16 0px, #2e1f16 18px, #34241a 18px, #34241a 36px);
+      repeating-linear-gradient(135deg, #373f51 0px, #373f51 18px, #2f3646 18px, #2f3646 36px);
     display:flex;
     align-items:flex-end;
     padding:16px;
@@ -297,7 +297,7 @@
     border:1px dashed var(--line);
     padding:6px 10px;
     border-radius:2px;
-    background:rgba(35,23,16,0.55);
+    background:rgba(27,27,30,0.55);
   }
 
   /* ---------- contact ---------- */
@@ -343,7 +343,7 @@
   }
   .contact-list .v.placeholder{
     color:var(--cream-dim);
-    font-family:'Inter', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-size:0.95rem;
     font-style:italic;
   }
