@@ -135,30 +135,11 @@
     display:flex;
     align-items:flex-end;
     background:
-      linear-gradient(180deg, rgba(27,27,30,0.15) 0%, rgba(15,15,17,0.92) 92%),
-      repeating-linear-gradient(100deg, #373f51 0px, #373f51 40px, #2f3646 40px, #2f3646 80px);
+      linear-gradient(180deg, rgba(27,27,30,0.35) 0%, rgba(27,27,30,0.55) 45%, rgba(15,15,17,0.92) 95%),
+      url('hero.jpg');
+    background-size:cover;
+    background-position:center 30%;
     overflow:hidden;
-  }
-  .hero::before{
-    /* placeholder for hero photo: replace this block's background with a real image */
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(88,164,176,0.18), transparent 55%),
-      radial-gradient(circle at 80% 70%, rgba(55,63,81,0.30), transparent 55%);
-  }
-  .hero-photo-note{
-    position:absolute;
-    top:20px;
-    right:20px;
-    font-size:0.68rem;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    color:var(--cream-dim);
-    border:1px dashed var(--line);
-    padding:6px 10px;
-    border-radius:2px;
   }
   .hero-inner{
     position:relative;
@@ -399,7 +380,6 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-photo-note">Placeholder: swap for hero photo</div>
   <div class="hero-inner">
     <img class="hero-mark" src="logo-cream.png" alt="Wallace &amp; Doyle, Handcrafted Fishing Rods, South Hero, Vermont">
     <h1>Built rod by rod,<br><em>not off a line.</em></h1>
