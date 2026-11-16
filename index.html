@@ -289,6 +289,50 @@
     background:linear-gradient(180deg, transparent, rgba(27,27,30,0.85));
   }
 
+  /* ---------- product sections ---------- */
+  .product{ padding:92px 0; }
+  .product-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .product.reverse .product-text{ order:2; }
+  .product.reverse .product-media{ order:1; }
+  .product-text h2{
+    font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    color:var(--cream);
+    line-height:1.12;
+    margin-bottom:20px;
+  }
+  .product-text p{
+    color:var(--cream-dim);
+    font-size:1.02rem;
+    margin-bottom:16px;
+  }
+  .product-text p:last-child{ margin-bottom:0; }
+  .product-media{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .product-media.stack{ grid-template-columns:1fr; }
+  .product-media figure{
+    position:relative;
+    overflow:hidden;
+    border-radius:3px;
+    background:#373f51;
+    aspect-ratio:4/5;
+  }
+  .product-media figure.wide{ aspect-ratio:4/3; grid-column:1 / -1; }
+  .product-media img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform 0.5s ease;
+  }
+  .product-media figure:hover img{ transform:scale(1.04); }
+
   /* ---------- contact ---------- */
   .contact{
     padding:90px 0 110px;
@@ -357,6 +401,10 @@
     .about-grid, .contact-inner{ grid-template-columns:1fr; gap:36px; }
     .gallery-grid{ max-width:none; }
     .hero{ align-items:flex-end; min-height:78vh; }
+    .product-inner{ grid-template-columns:1fr; gap:32px; }
+    .product.reverse .product-text{ order:1; }
+    .product.reverse .product-media{ order:2; }
+    .product{ padding:64px 0; }
   }
 
   @media (max-width:480px){
@@ -380,8 +428,10 @@
   <div class="nav-inner">
     <a class="nav-mark" href="#top" aria-label="Wallace &amp; Doyle home"><img src="logo-cream.png" alt="Wallace &amp; Doyle, Handcrafted Fishing Rods, South Hero, Vermont"></a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">The Rods</a></li>
+      <li><a href="#rods">Rods</a></li>
+      <li><a href="#nets">Nets</a></li>
+      <li><a href="#boxes">Fly Boxes</a></li>
+      <li><a href="#wood">Wood Works</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -390,29 +440,31 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <img class="hero-mark" src="logo-cream.png" alt="Wallace &amp; Doyle, Handcrafted Fishing Rods, South Hero, Vermont">
-    <h1>Built rod by rod,<br><em>not off a line.</em></h1>
-    <p class="tagline">Wallace &amp; Doyle is a Vermont rod builder specializing in custom fly rods and custom bass rods, each one hand-built to order in South Hero, Vermont. Every blank is built, wrapped, and finished by hand for the angler and the water it's made for. No factory runs, no off-the-rack rods.</p>
+    <h1>We build <em>Tools for Fishing.</em></h1>
+    <p class="tagline">Welcome to Wallace &amp; Doyle, home of the Vermont Fishing Rod Works. Based in South Hero, Vermont, we handcraft fishing rods, nets, and fly boxes. Everything we build is meant to be worked hard and made to last. Serious tools for serious anglers.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Start a build</a>
-      <a href="#work" class="btn btn-ghost">See the rods</a>
+      <a href="#rods" class="btn btn-ghost">See the work</a>
     </div>
   </div>
 </section>
 
 <div class="wrap-divider dense"></div>
 
-<section class="about" id="about">
+<!-- RODS -->
+<section class="product" id="rods">
   <div class="wrap">
-    <div class="about-grid">
-      <div>
-        <div class="section-label">About</div>
-        <h2>Two names,<br>one build bench.</h2>
+    <div class="product-inner">
+      <div class="product-text">
+        <div class="section-label">Rods</div>
+        <h2>Custom built, since 1984.</h2>
+        <p>Since 1984, Wallace &amp; Doyle has been building custom crafted carbon fiber and fiberglass fishing rods. Each rod is made to order, the foundation of the build a blank chosen to suit your specific requirements.</p>
+        <p>Our focus on quality is blended with creative grip and threadwork that delivers a high-performance rod simply not available elsewhere. We proudly use quality USA-made components from respected manufacturers like Rod Forge, Northfork Composites, St. Croix, REC, Snake Brand, Lemke, and others.</p>
+        <p>For all your rod needs, Spin, Bait casting, Fly, and Ice, we provide a total solution package.</p>
       </div>
-      <div class="about-copy">
-        <p>Wallace &amp; Doyle has been building fishing rods since 1984, taking the name Wallace &amp; Doyle in 2015. We build fully custom carbon and fiberglass rods, made to order, from ultralight all the way up to heavy baitcasting, with a focus on inshore and fly rods. We don't make bamboo.</p>
-        <p>Every rod is built around the finest components we can find, with an emphasis on USA-made hardware from names like North Fork Components, Rod Forge, St. Croix, REC, Snake Brand, Lemke, and Struble. We turn our own grips and inserts from cork, EVA, and hardwoods, and custom-wrap the weaves and guides by hand.</p>
-        <p>Alongside rods, we craft bent-lamination landing nets and wood fly boxes from Vermont hardwoods. We mill our own rough-sawn lumber and steam and form each net by hand, with a range of hoop and handle options. Our first net was built in 2025, and like everything we make, it's meant to be heirloom quality.</p>
-        <p>Our studio sits on the shores of Lake Champlain, which doubles as the testing ground for everything we build. Whether it's a retirement gift or a serious angler's next favorite rod, we build it one at a time, for the water it's headed to.</p>
+      <div class="product-media">
+        <figure><img src="rods-1.jpg" alt="A row of five custom Wallace &amp; Doyle fishing rods with finished cork grips"></figure>
+        <figure><img src="rods-2.jpg" alt="A custom carbon fiber rod tube beside a decorative inlaid rod grip"></figure>
       </div>
     </div>
   </div>
@@ -420,27 +472,60 @@
 
 <div class="wrap-divider"></div>
 
-<section class="gallery" id="work">
+<!-- NETS -->
+<section class="product reverse" id="nets">
   <div class="wrap">
-    <div class="gallery-head">
-      <div>
-        <div class="section-label">The Rods</div>
-        <h2 style="font-size:1.6rem;">A few builds</h2>
+    <div class="product-inner">
+      <div class="product-text">
+        <div class="section-label">Nets</div>
+        <h2>Bent-laminated<br>landing nets.</h2>
+        <p>We start with quality Vermont rough-sawn lumber and fashion bent-laminated landing nets. Featuring our exclusive Dynamic Structural Core technology, each net is crafted with precision-fit laminations, optional hoop and handle sizes to suit your specific needs, and rubber net bags from Cumings Nets. An optional nylon mesh net is also available.</p>
+        <p>Choose from our ready-to-fish inventory or build your own. Nets are available in four hoop sizes with handles ranging from 8 to 40 inches. Wood options include Maple, Cherry, Black Walnut, Ash, and many others.</p>
+        <p>Ready for the stream or pond, kayak, canoe, or the boat, let a Wallace &amp; Doyle net enhance your next fishing adventure.</p>
+      </div>
+      <div class="product-media">
+        <figure><img src="nets-1.jpg" alt="A walnut and maple Wallace &amp; Doyle landing net with the W&amp;D mark burned into the handle"></figure>
+        <figure><img src="nets-2.jpg" alt="Three leather-wrapped net hoops in different sizes laid out"></figure>
       </div>
     </div>
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="work-1.jpg" alt="Custom Wallace &amp; Doyle rods, wooden fly boxes, and hardwood landing nets laid out in the workshop">
-        <figcaption>Rods, wood fly boxes, and hardwood landing nets</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="work-2.jpg" alt="A brown trout in a Wallace &amp; Doyle bent-lamination landing net, the W&amp;D mark burned into the maple handle">
-        <figcaption>Bent-lamination net on the water</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="build-tube.jpg" alt="Wallace &amp; Doyle rod sections beside a custom carbon fiber rod tube with the Wallace &amp; Doyle Custom Fishing logo">
-        <figcaption>A finished build, packed in its own carbon tube</figcaption>
-      </figure>
+  </div>
+</section>
+
+<div class="wrap-divider"></div>
+
+<!-- FLY BOXES -->
+<section class="product" id="boxes">
+  <div class="wrap">
+    <div class="product-inner">
+      <div class="product-text">
+        <div class="section-label">Fly Boxes</div>
+        <h2>Grain-matched<br>and built to last.</h2>
+        <p>Each fly box is made with Vermont hardwood, carefully selected to feature the beauty of the wood and meticulously grain-matched.</p>
+        <p>Featuring SOSS barrel hinges and rare-earth magnets, each box provides ample room for flies without excess bulk or weight.</p>
+      </div>
+      <div class="product-media">
+        <figure><img src="boxes-1.jpg" alt="An open Wallace &amp; Doyle wooden fly box holding flies, with the branded sign behind it"></figure>
+        <figure><img src="boxes-2.jpg" alt="A close-up of an open grain-matched wooden fly box holding a popper and streamers"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap-divider"></div>
+
+<!-- WOOD WORKS -->
+<section class="product reverse" id="wood">
+  <div class="wrap">
+    <div class="product-inner">
+      <div class="product-text">
+        <div class="section-label">Wood Works</div>
+        <h2>Simple treasures,<br>built to be used.</h2>
+        <p>Rod and net building are extensions of woodworking, complementary and mutually skill-building. Our studio provides the perfect environment to create and produce simple treasures, built to be used every day.</p>
+      </div>
+      <div class="product-media">
+        <figure><img src="wood-1.jpg" alt="A handcrafted wooden backgammon board with inlaid geometric wood pattern"></figure>
+        <figure><img src="wood-2.jpg" alt="A round striped cutting board made from alternating hardwoods"></figure>
+      </div>
     </div>
   </div>
 </section>
@@ -457,12 +542,24 @@
       </div>
       <ul class="contact-list">
         <li>
+          <span class="k">Phone</span>
+          <a class="v" href="tel:+18023737334">802.373.7334</a>
+        </li>
+        <li>
           <span class="k">Email</span>
           <a class="v" href="mailto:info@wallaceanddoyle.com">info@wallaceanddoyle.com</a>
         </li>
         <li>
+          <span class="k">Mail</span>
+          <span class="v">PO Box 483, South Hero, VT 05486</span>
+        </li>
+        <li>
           <span class="k">Facebook</span>
           <a class="v" href="https://www.facebook.com/wallaceanddoyle/" target="_blank" rel="noopener">facebook.com/wallaceanddoyle</a>
+        </li>
+        <li>
+          <span class="k">Instagram</span>
+          <a class="v" href="https://www.instagram.com/wallace_and_doyle/" target="_blank" rel="noopener">@wallace_and_doyle</a>
         </li>
       </ul>
     </div>
